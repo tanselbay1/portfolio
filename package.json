@@ -17,13 +17,9 @@
         "test": "react-scripts test",
         "eject": "react-scripts eject",
         "prepare": "husky install",
-        "lint": "eslint ."
-    },
-    "eslintConfig": {
-        "extends": [
-            "react-app",
-            "react-app/jest"
-        ]
+        "lint": "eslint .",
+        "format": "prettier --write .",
+        "pre-commit": "lint-staged"
     },
     "browserslist": {
         "production": [
@@ -39,15 +35,18 @@
     },
     "devDependencies": {
         "eslint": "^8.27.0",
+        "eslint-config-airbnb": "^19.0.4",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-import": "^2.26.0",
+        "eslint-plugin-jsx-a11y": "^6.6.1",
         "eslint-plugin-react": "^7.31.10",
+        "eslint-plugin-react-hooks": "^4.6.0",
         "husky": "^8.0.2",
         "lint-staged": "^13.0.3",
         "prettier": "^2.7.1"
     },
     "lint-staged": {
-        "*/.{js,jsx,ts,tsx}": [
-            "npx prettier --write",
-            "npx eslint --fix"
-        ]
+        "*.{js,jsx}": "eslint --cache",
+        "*.{html,css,scss,js,jsx,json,md}": "prettier --write"
     }
 }
