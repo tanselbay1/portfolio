@@ -1,8 +1,7 @@
 function App() {
-    const a;
     return (
         <div className="App">
-          <h1>Hello Kai</h1>
+            <h1>Hello Kai</h1>
         </div>
     );
 }
