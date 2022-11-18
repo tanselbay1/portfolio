@@ -1,7 +1,13 @@
 @use './style-components/reset';
 @use './style-components/mixins' as *;
+@use './style-components/variables' as *;
 @use './style-components/header';
 
 * {
-    font-size: 16px;
+    font-family: $font-text;
+}
+
+body {
+    background-color: $dark-gray;
+    color: $text-color;
 }
