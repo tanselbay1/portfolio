@@ -1,6 +1,9 @@
 @use './mixins' as *;
 @use './variables' as *;
 
+//Import icons for theme toogle button
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css);
+
 .header__container {
     nav {
         @include flex(row, space-around);
