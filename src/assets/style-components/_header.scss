@@ -5,11 +5,38 @@
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css);
 
 .header__container {
-    nav {
-        @include flex(row, space-around);
+    @include flex(row, flex-start, space-between);
+    padding: 3rem;
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+
+    h3 {
+        font-size: 1.5rem;
+        .surname {
+            color: $dark-red;
+        }
     }
-    a {
-        text-decoration: none;
-        color: $text-color;
+
+    nav {
+        @include flex(column, center, space-around);
+
+        a {
+            color: $text-color;
+            background-color: $red;
+            font-size: 1rem;
+            padding: 0.4rem;
+            text-decoration: none;
+        }
+
+        li {
+            margin-bottom: 0.4rem;
+        }
+
+        button {
+            background: transparent;
+            border: none;
+            margin-right: 20px;
+        }
     }
 }
