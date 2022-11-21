@@ -1,7 +1,7 @@
 import Typed from 'typed.js';
 import { useEffect, useRef } from 'react';
 
-export default function Hero() {
+export function Hero() {
     const typedElement = useRef(null);
     const typedInstance = useRef(null);
 

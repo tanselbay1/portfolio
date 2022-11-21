@@ -1,6 +1,5 @@
 import 'assets/styles.scss';
-import { Header } from 'components';
-import Hero from './components/Hero';
+import { Header, Hero } from 'components';
 
 function App() {
     return (
