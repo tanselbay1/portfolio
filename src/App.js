@@ -1,5 +1,5 @@
-import './assets/styles.scss';
-import Header from './components/Header';
+import 'assets/styles.scss';
+import { Header } from 'components';
 
 function App() {
     return (
