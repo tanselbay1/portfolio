@@ -5,7 +5,7 @@ import { FiMenu } from 'react-icons/fi';
 
 import ThemeToggle from './ThemeToggle';
 
-export default function Header() {
+export function Header() {
     const [navbarOpen, setNavbarOpen] = useState(false);
 
     const handleToggle = () => {
