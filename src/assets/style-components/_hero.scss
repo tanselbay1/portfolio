@@ -18,7 +18,8 @@
         @include space-y(1.25rem);
     }
 
-    .animated-text {
+    .animated-text,
+    .typed-cursor {
         color: $red;
     }
 
