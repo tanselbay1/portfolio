@@ -1,0 +1,41 @@
+@use '../mixins' as *;
+@use '../variables' as *;
+
+.nav-menu {
+    @include flex(column, flex-end, center);
+    width: 100%;
+    margin-top: 4.6rem;
+
+    a.nav-menu-link {
+        color: var(--text-color);
+        background-color: var(--red);
+        display: block;
+        font-size: 1rem;
+        padding: 0.4rem;
+        padding-left: 2rem;
+        text-decoration: none;
+
+        svg {
+            margin-right: 0.3rem;
+        }
+    }
+
+    ul {
+        width: 20rem;
+    }
+
+    li {
+        margin-bottom: 0.1rem;
+    }
+
+    .menu > li:last-child {
+        a {
+            border-bottom-left-radius: 20px;
+        }
+    }
+    .menu > li:first-child {
+        a {
+            border-top-left-radius: 20px;
+        }
+    }
+}

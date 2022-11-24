@@ -1,14 +1,15 @@
 @use './style-components/reset';
 @use './style-components/mixins' as *;
 @use './style-components/variables' as *;
-@use './style-components/header';
-@use './style-components/themeToggle';
+@use './style-components//header/header';
+@use './style-components//header/themeToggle';
+@use './style-components/header/nav-menu';
 
 * {
     font-family: $font-text;
 }
 
 body {
-    background-color: $dark-gray;
-    color: $text-color;
+    background-color: var(--dark-gray);
+    color: var(--text-color);
 }

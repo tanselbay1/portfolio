@@ -1,0 +1,35 @@
+@use '../mixins' as *;
+@use '../variables' as *;
+
+.header__container {
+    @include flex(row, flex-start, space-between);
+    padding: 2rem 2rem 0.3rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+
+    h3 {
+        font-size: 1.5rem;
+        letter-spacing: 2px;
+        .surname {
+            color: var(--dark-red);
+        }
+    }
+
+    .nav {
+        @include flex(column, center, space-around);
+
+        button {
+            background: transparent;
+            border: none;
+            background-color: var(--dark-gray);
+            color: var(--text-color);
+            margin-right: 20px;
+            svg {
+                height: 1.875rem;
+                width: 1.875rem;
+            }
+        }
+    }
+}
