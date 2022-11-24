@@ -1,22 +1,21 @@
-import Typed from 'typed.js';
 import { useEffect, useRef } from 'react';
+import {
+    createTypedInstance,
+    destroyTypedInstance,
+    TYPED_HERO_OPTIONS,
+} from 'library/typed';
 
 export function Hero() {
     const typedElement = useRef(null);
     const typedInstance = useRef(null);
 
     useEffect(() => {
-        const options = {
-            strings: ['Coder', 'Programmer', 'Developer'],
-            startDelay: 300,
-            typeSpeed: 150,
-            backSpeed: 100,
-            loop: true,
-        };
+        typedInstance.current = createTypedInstance(
+            typedElement.current,
+            TYPED_HERO_OPTIONS
+        );
 
-        typedInstance.current = new Typed(typedElement.current, options);
-
-        return () => typedInstance.current.destroy();
+        return () => destroyTypedInstance(typedInstance.current);
     }, []);
 
     return (
