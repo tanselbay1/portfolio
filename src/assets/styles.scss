@@ -2,6 +2,7 @@
 @use './style-components/mixins' as *;
 @use './style-components/variables' as *;
 @use './style-components/header';
+@use './style-components/hero';
 
 * {
     font-family: $font-text;
