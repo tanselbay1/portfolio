@@ -16,7 +16,7 @@ export function Header() {
     // Get window size with useWindowSize custom hook
     const windowSize = useWindowSize();
     const isMobile = windowSize.width < 768;
-    // const isTablet = windowSize.width < 1024;
+    // const isTablet = windowSize.width > 768;
     // const isDesktop = windowSize.width >= 1024;
 
     const handleToggle = () => {

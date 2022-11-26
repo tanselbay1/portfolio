@@ -10,13 +10,28 @@
     z-index: 3;
 
     @include medium {
-        left: 0;
-        @include flex(row, flex-start, space-evenly);
+        left: -6rem;
+        @include flex(row, center, space-around);
+    }
+
+    @include x-large {
+        left: -3rem;
     }
 
     h3 {
         font-size: 1.5rem;
         letter-spacing: 2px;
+
+        @include medium {
+            margin-right: 8rem;
+            font-size: 1.6rem;
+        }
+
+        @include x-large {
+            font-size: 2rem;
+            margin-right: 30vw;
+        }
+
         .surname {
             color: var(--dark-red);
         }

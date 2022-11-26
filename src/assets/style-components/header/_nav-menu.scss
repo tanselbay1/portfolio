@@ -9,12 +9,12 @@
 
     @include medium {
         margin-top: 0;
-        @include flex(row, center, center);
+        @include flex(row, baseline, space-evenly);
     }
 
     div:last-child {
         @include medium {
-            transform: translateX(0) !important;
+            transform: translateX(0);
         }
     }
 
@@ -24,12 +24,23 @@
         display: block;
         font-size: 1rem;
         padding: 0.4rem;
-        padding-left: 2rem;
+        margin-left: 2rem;
         text-decoration: none;
 
         @include medium {
+            @include flex(row, baseline, center);
             background: none;
-            @include flex(row, center, center);
+            margin-left: 1vw;
+        }
+
+        @include large {
+            font-size: 1.1rem;
+            margin-left: 2vw;
+        }
+
+        @include x-large {
+            font-size: 1.2rem;
+            margin-left: 3rem;
         }
 
         svg {

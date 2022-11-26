@@ -8,6 +8,14 @@
     @include flex(row, center, center);
     margin-top: 0.7rem;
 
+    @include medium {
+        margin-left: 6vw;
+    }
+
+    @include x-large {
+        margin-right: 15vw;
+    }
+
     .checkbox {
         opacity: 0;
         position: absolute;
