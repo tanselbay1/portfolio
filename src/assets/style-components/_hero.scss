@@ -1,0 +1,98 @@
+@use './mixins' as *;
+@use './variables' as *;
+
+.hero-container {
+    min-height: 100vh;
+    padding: 0 1rem 0 1rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    @include space-y(1rem);
+
+    @include medium {
+        @include space-y(1.25rem);
+    }
+
+    .animated-text,
+    .typed-cursor {
+        color: $red;
+    }
+
+    .title {
+        font-size: 2rem;
+        line-height: 1;
+
+        @include small {
+            font-size: 3rem;
+        }
+
+        @include medium {
+            font-size: 4rem;
+        }
+    }
+
+    .sub-title {
+        color: $lighter-text;
+        font-size: 0.85rem;
+        font-weight: 400;
+        max-width: 20rem;
+
+        @include small {
+            font-size: 1rem;
+        }
+
+        @include medium {
+            font-size: 1.25rem;
+        }
+    }
+
+    .btn-group {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+
+        .btn {
+            display: block;
+            text-decoration: none;
+            border-radius: 100rem;
+            border: none;
+            padding: 0.5rem 1.5rem;
+            color: $text-color;
+            background-color: $dark-gray;
+            transition: 0.3s ease;
+            font-weight: 700;
+            font-size: 0.8rem;
+            border: 2px solid;
+            letter-spacing: 0.1em;
+
+            @include small {
+                font-size: 1rem;
+            }
+        }
+
+        .btn-blue {
+            background: $blue;
+            border-color: $blue;
+
+            &:hover {
+                background-color: $dark-gray;
+            }
+        }
+
+        .btn-red-border {
+            border-color: $red;
+
+            &:hover {
+                background-color: $red;
+                box-shadow: rgba(228, 78, 88, 0.404) 0 0 0 5px;
+            }
+        }
+    }
+}
