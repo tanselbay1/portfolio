@@ -5,32 +5,6 @@ $font-text: 'Montserrat', sans-serif;
 
 //COLORS
 //Dark Theme Colors
-
-// :root {
-//     $red: #e44e58;
-//     $dark-red: #e43956c4;
-//     $blue: #0077b5;
-//     $gray: rgb(170, 170, 170);
-//     $dark-gray: #181a1b;
-//     $dark-blue: #002333;
-//     $text-color: #fff;
-//     $lighter-text: rgb(219, 219, 219);
-//     $ard-background: #2e3031;
-//     $skills-span: rgb(200, 200, 200);
-// }
-
-//Light Theme Colors
-
-// .light {
-//     $gray: rgb(107, 107, 107);
-//     $dark-gray: white;
-//     $text-color: #000;
-//     $lighter-text: rgb(37, 37, 37);
-//     $card-background: #eeeeee;
-//     $skills-span: rgb(61, 61, 61);
-//     background-color: $dark-gray;
-// }
-
 :root {
     --red: #e44e58;
     --dark-red: #e43956c4;
@@ -44,6 +18,7 @@ $font-text: 'Montserrat', sans-serif;
     --skills-span: rgb(200, 200, 200);
 }
 
+//Light Theme Colors
 .light {
     --gray: rgb(107, 107, 107);
     --dark-gray: white;

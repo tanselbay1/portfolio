@@ -9,6 +9,11 @@
     width: 100%;
     z-index: 3;
 
+    @include medium {
+        left: 0;
+        @include flex(row, flex-start, space-evenly);
+    }
+
     h3 {
         font-size: 1.5rem;
         letter-spacing: 2px;

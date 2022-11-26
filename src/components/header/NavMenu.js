@@ -4,7 +4,7 @@ import { HiUser } from 'react-icons/hi';
 import { FaTools, FaCodepen } from 'react-icons/fa';
 import ThemeToggle from '../ThemeToggle';
 
-export default function NavMenu({ isOpen, onThemeChange }) {
+export default function NavMenu({ isOpen = true, onThemeChange }) {
     const handleToggle = () => {
         onThemeChange();
     };
