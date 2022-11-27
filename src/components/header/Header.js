@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useLayoutEffect, useRef } from 'react';
 
 // Hamburger Menu Icons
 import { MdClose } from 'react-icons/md';
@@ -12,12 +12,12 @@ export function Header() {
     // If theme state is false, app is on dark mode.
     const [theme, setTheme] = useState(false);
     const [navbarOpen, setNavbarOpen] = useState(false);
+    const headerContainer = useRef(null);
+    const logoSurname = useRef(null);
 
     // Get window size with useWindowSize custom hook
     const windowSize = useWindowSize();
     const isMobile = windowSize.width < 768;
-    // const isTablet = windowSize.width > 768;
-    // const isDesktop = windowSize.width >= 1024;
 
     const handleToggle = () => {
         setNavbarOpen((prevState) => !prevState);
@@ -31,11 +31,33 @@ export function Header() {
         document.body.classList.toggle('light');
     }, [theme]);
 
+    useLayoutEffect(() => {
+        const handleScroll = () => {
+            const isScrolling = window.scrollY > 0;
+            if (!isMobile && isScrolling) {
+                headerContainer.current.classList.add('scrolling');
+                logoSurname.current.classList.add('logo-surname');
+            }
+            if (!isScrolling) {
+                headerContainer.current.classList.remove('scrolling');
+                logoSurname.current.classList.remove('logo-surname');
+            }
+        };
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    });
+
     return (
         <header>
-            <div className="header__container">
+            <div ref={headerContainer} className="header__container">
                 <h3 className="logo">
-                    NAME <span className="surname">SURNAME</span>
+                    NAME{' '}
+                    <span ref={logoSurname} className="surname">
+                        SURNAME
+                    </span>
                 </h3>
                 <nav className="nav">
                     {/* Show hamburger menu button on medium and small screens */}
@@ -51,6 +73,7 @@ export function Header() {
                         <NavMenu
                             onThemeChange={handleThemeToggle}
                             theme={theme}
+                            toggleLocation={isMobile}
                         />
                     )}
                 </nav>
@@ -60,6 +83,7 @@ export function Header() {
                     isOpen={navbarOpen}
                     onThemeChange={handleThemeToggle}
                     theme={theme}
+                    toggleLocation={isMobile}
                 />
             )}
         </header>

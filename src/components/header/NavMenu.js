@@ -4,7 +4,11 @@ import { HiUser } from 'react-icons/hi';
 import { FaTools, FaCodepen } from 'react-icons/fa';
 import ThemeToggle from '../ThemeToggle';
 
-export default function NavMenu({ isOpen = true, onThemeChange }) {
+export default function NavMenu({
+    isOpen = true,
+    onThemeChange,
+    toggleLocation,
+}) {
     const handleToggle = () => {
         onThemeChange();
     };
@@ -56,7 +60,11 @@ export default function NavMenu({ isOpen = true, onThemeChange }) {
                     <motion.div
                         key="themeToggle"
                         initial={{ x: '30vw', opacity: 0, scale: 0.5 }}
-                        animate={{ x: -130, opacity: 1, scale: 1 }}
+                        animate={
+                            toggleLocation
+                                ? { x: -130, opacity: 1, scale: 1 }
+                                : { x: 60, opacity: 1, scale: 1 }
+                        }
                         transition={{ duration: 0.5 }}
                         exit={{ x: '30vw', opacity: 0, scale: 0 }}
                     >

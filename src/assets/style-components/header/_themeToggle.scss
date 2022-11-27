@@ -9,11 +9,15 @@
     margin-top: 0.7rem;
 
     @include medium {
-        margin-left: 6vw;
+        margin-left: 1vw;
+    }
+
+    @include large {
+        margin-left: 3vw;
     }
 
     @include x-large {
-        margin-right: 15vw;
+        margin-left: 10vw;
     }
 
     .checkbox {

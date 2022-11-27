@@ -3,37 +3,49 @@
 
 .header__container {
     @include flex(row, flex-start, space-between);
-    padding: 2rem 2rem 0.3rem;
+    padding: 2rem 2rem 1.3rem;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 3;
 
     @include medium {
-        left: -6rem;
+        // left: -6rem;
         @include flex(row, center, space-around);
+        padding-top: 2rem;
+        padding-bottom: 1.3rem;
     }
 
     @include x-large {
-        left: -3rem;
+        // left: -3rem;
     }
 
     h3 {
+        color: var(--text-color);
         font-size: 1.5rem;
         letter-spacing: 2px;
 
         @include medium {
-            margin-right: 8rem;
+            margin-right: 1vw;
             font-size: 1.6rem;
+        }
+
+        @include large {
+            font-size: 1.9rem;
+            margin-right: 0;
         }
 
         @include x-large {
             font-size: 2rem;
-            margin-right: 30vw;
+            // margin-right: 30vw;
         }
 
         .surname {
             color: var(--dark-red);
+        }
+
+        .logo-surname {
+            color: var(--text-color);
         }
     }
 
@@ -51,5 +63,13 @@
                 width: 1.875rem;
             }
         }
+    }
+}
+
+.scrolling {
+    @include medium {
+        transition: 1s all;
+        background-color: var(--red);
+        opacity: 0.8;
     }
 }

@@ -14,7 +14,7 @@ body {
     background-color: var(--dark-gray);
     color: var(--text-color);
 
-    @include medium {
-        margin: 5rem;
-    }
+    // @include medium {
+    //     margin: 5rem;
+    // }
 }

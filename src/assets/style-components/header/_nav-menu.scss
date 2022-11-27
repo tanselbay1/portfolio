@@ -4,11 +4,13 @@
 .nav-menu {
     @include flex(column, flex-end, center);
     position: absolute;
-    width: 100%;
+    //  width: 100%;
+    right: 0;
     margin-top: 4.6rem;
 
     @include medium {
         margin-top: 0;
+        position: static;
         @include flex(row, baseline, space-evenly);
     }
 
@@ -24,13 +26,30 @@
         display: block;
         font-size: 1rem;
         padding: 0.4rem;
+        position: relative;
         margin-left: 2rem;
         text-decoration: none;
+        z-index: 100;
 
         @include medium {
             @include flex(row, baseline, center);
             background: none;
-            margin-left: 1vw;
+            margin-left: 0.4vw;
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 5px;
+                display: block;
+                width: 0;
+                height: 4px;
+                background: var(--dark-red);
+                transition: width 0.3s ease;
+            }
+
+            &:hover::after {
+                width: 100%;
+            }
         }
 
         @include large {
