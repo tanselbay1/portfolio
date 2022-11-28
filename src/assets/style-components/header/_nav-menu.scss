@@ -3,7 +3,7 @@
 
 .nav-menu {
     @include flex(column, flex-end, center);
-    position: absolute;
+    position: fixed;
     //  width: 100%;
     right: 0;
     margin-top: 4.6rem;

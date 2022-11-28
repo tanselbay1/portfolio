@@ -69,7 +69,7 @@
 .scrolling {
     @include medium {
         transition: 1s all;
-        background-color: var(--red);
-        opacity: 0.8;
+        background-color: var(--dark-red);
+        backdrop-filter: blur(8px);
     }
 }

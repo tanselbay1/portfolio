@@ -3,7 +3,7 @@ import {
     createTypedInstance,
     destroyTypedInstance,
     TYPED_HERO_OPTIONS,
-} from 'library/typed';
+} from '../library/typed';
 
 export function Hero() {
     const typedElement = useRef(null);

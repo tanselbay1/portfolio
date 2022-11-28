@@ -5,7 +5,7 @@ import { MdClose } from 'react-icons/md';
 import { FiMenu } from 'react-icons/fi';
 
 import { motion } from 'framer-motion';
-import useWindowSize from 'hooks/useWindowSize';
+import useWindowSize from '../../hooks/useWindowSize';
 import NavMenu from './NavMenu';
 
 export function Header() {
@@ -48,7 +48,7 @@ export function Header() {
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
-    });
+    }, []);
 
     return (
         <header>
