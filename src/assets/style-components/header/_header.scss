@@ -10,7 +10,6 @@
     z-index: 3;
 
     @include medium {
-        // left: -6rem;
         @include flex(row, center, flex-start);
         padding-top: 2rem;
         padding-bottom: 1.3rem;
@@ -30,7 +29,7 @@
         letter-spacing: 2px;
 
         @include medium {
-            margin-right: 4vw;
+            margin-right: 5vw;
             font-size: 1.6rem;
         }
 
@@ -41,7 +40,6 @@
 
         @include x-large {
             font-size: 2rem;
-            // margin-right: 30vw;
         }
 
         .surname {
@@ -59,7 +57,6 @@
         button {
             background: transparent;
             border: none;
-            background-color: var(--dark-gray);
             color: var(--text-color);
             cursor: pointer;
             margin-right: 20px;

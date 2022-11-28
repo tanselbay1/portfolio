@@ -1,6 +1,6 @@
 import { FaMoon, FaSun } from 'react-icons/fa';
 
-export default function ThemeToggle({ toggle }) {
+export default function ThemeToggle({ toggle, isThemeDark }) {
     const handleToggle = () => toggle();
 
     return (
@@ -9,7 +9,8 @@ export default function ThemeToggle({ toggle }) {
                 type="checkbox"
                 className="checkbox"
                 id="checkbox"
-                onClick={handleToggle}
+                onChange={handleToggle}
+                checked={isThemeDark}
             />
             <label htmlFor="checkbox" className="label">
                 <FaMoon color="pink" />

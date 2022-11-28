@@ -8,6 +8,7 @@ export default function NavMenu({
     isOpen = true,
     onThemeChange,
     toggleLocation,
+    theme,
 }) {
     const handleToggle = () => {
         onThemeChange();
@@ -68,7 +69,10 @@ export default function NavMenu({
                         transition={{ duration: 0.5 }}
                         exit={{ x: '30vw', opacity: 0, scale: 0 }}
                     >
-                        <ThemeToggle toggle={handleToggle} />
+                        <ThemeToggle
+                            toggle={handleToggle}
+                            isThemeDark={theme}
+                        />
                     </motion.div>
                 )}
             </AnimatePresence>
