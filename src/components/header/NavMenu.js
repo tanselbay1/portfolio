@@ -63,7 +63,7 @@ export default function NavMenu({
                         animate={
                             toggleLocation
                                 ? { x: -130, opacity: 1, scale: 1 }
-                                : { x: 60, opacity: 1, scale: 1 }
+                                : { x: '165%', opacity: 1, scale: 1 }
                         }
                         transition={{ duration: 0.5 }}
                         exit={{ x: '30vw', opacity: 0, scale: 0 }}

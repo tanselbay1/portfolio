@@ -9,15 +9,15 @@
     margin-top: 0.7rem;
 
     @include medium {
-        margin-left: 1vw;
+        // margin-left: 1vw;
     }
 
     @include large {
-        margin-left: 3vw;
+        // margin-left: 2vw;
     }
 
     @include x-large {
-        margin-left: 10vw;
+        // margin-left: 3vw;
     }
 
     .checkbox {
@@ -53,13 +53,5 @@
     /*  target the elemenent after the label*/
     .checkbox:checked + .label .ball {
         transform: translateX(24px);
-    }
-
-    .fa-moon {
-        color: pink;
-    }
-
-    .fa-sun {
-        color: yellow;
     }
 }

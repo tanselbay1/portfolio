@@ -34,7 +34,7 @@ export function Header() {
     useLayoutEffect(() => {
         const handleScroll = () => {
             const isScrolling = window.scrollY > 0;
-            if (!isMobile && isScrolling) {
+            if (isScrolling) {
                 headerContainer.current.classList.add('scrolling');
                 logoSurname.current.classList.add('logo-surname');
             }

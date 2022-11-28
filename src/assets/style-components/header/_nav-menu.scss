@@ -4,9 +4,8 @@
 .nav-menu {
     @include flex(column, flex-end, center);
     position: fixed;
-    //  width: 100%;
     right: 0;
-    margin-top: 4.6rem;
+    margin-top: 5.8rem;
 
     @include medium {
         margin-top: 0;
@@ -31,6 +30,12 @@
         text-decoration: none;
         z-index: 100;
 
+        &:hover {
+            transition: 0.5s all;
+            background-color: var(--dark-red);
+            backdrop-filter: blur(8px);
+        }
+
         @include medium {
             @include flex(row, baseline, center);
             background: none;
@@ -47,6 +52,10 @@
                 transition: width 0.3s ease;
             }
 
+            &:hover {
+                background: none;
+            }
+
             &:hover::after {
                 width: 100%;
             }
@@ -59,7 +68,7 @@
 
         @include x-large {
             font-size: 1.2rem;
-            margin-left: 3rem;
+            margin-left: 1rem;
         }
 
         svg {
