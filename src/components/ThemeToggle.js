@@ -12,10 +12,8 @@ export default function ThemeToggle({ toggle }) {
                 onClick={handleToggle}
             />
             <label htmlFor="checkbox" className="label">
-                <FaMoon />
-                <FaSun />
-                {/* <i className="fas fa-moon" /> */}
-                {/* <i className="fas fa-sun" /> */}
+                <FaMoon color="pink" />
+                <FaSun color="yellow" />
                 <div className="ball" />
             </label>
         </div>
