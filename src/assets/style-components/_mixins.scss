@@ -1,7 +1,8 @@
-@mixin flex($direction, $align) {
+@mixin flex($direction, $align, $justify) {
     display: flex;
     flex-direction: $direction;
     align-items: $align;
+    justify-content: $justify;
 }
 
 @mixin space-x($space) {
@@ -30,6 +31,12 @@
 
 @mixin large {
     @media screen and (min-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin x-large {
+    @media screen and (min-width: 1280px) {
         @content;
     }
 }

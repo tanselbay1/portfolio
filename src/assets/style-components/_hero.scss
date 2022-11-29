@@ -2,7 +2,7 @@
 @use './variables' as *;
 
 .hero-container {
-    min-height: 100vh;
+    min-height: 110vh;
     padding: 0 1rem 0 1rem;
 
     display: flex;
@@ -20,7 +20,7 @@
 
     .animated-text,
     .typed-cursor {
-        color: $red;
+        color: var(--red);
     }
 
     .title {
@@ -37,7 +37,7 @@
     }
 
     .sub-title {
-        color: $lighter-text;
+        color: var(--lighter-text);
         font-size: 0.85rem;
         font-weight: 400;
         max-width: 20rem;
@@ -64,8 +64,8 @@
             border-radius: 100rem;
             border: none;
             padding: 0.5rem 1.5rem;
-            color: $text-color;
-            background-color: $dark-gray;
+            color: var(--text-color);
+            background-color: var(--dark-grey);
             transition: 0.3s ease;
             font-weight: 700;
             font-size: 0.8rem;
@@ -78,19 +78,19 @@
         }
 
         .btn-blue {
-            background: $blue;
-            border-color: $blue;
+            background: var(--blue);
+            border-color: var(--blue);
 
             &:hover {
-                background-color: $dark-gray;
+                background-color: var(--dark-grey);
             }
         }
 
         .btn-red-border {
-            border-color: $red;
+            border-color: var(--red);
 
             &:hover {
-                background-color: $red;
+                background-color: var(--red);
                 box-shadow: rgba(228, 78, 88, 0.404) 0 0 0 5px;
             }
         }
