@@ -5,6 +5,7 @@
 @use './style-components//header/themeToggle';
 @use './style-components/header/nav-menu';
 @use './style-components/hero';
+@use './style-components/about';
 
 * {
     font-family: $font-text;
