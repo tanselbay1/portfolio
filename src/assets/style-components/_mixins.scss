@@ -1,7 +1,26 @@
-@mixin flex($direction, $align) {
+@mixin flex($direction, $align, $justify) {
     display: flex;
     flex-direction: $direction;
     align-items: $align;
+    justify-content: $justify;
+}
+
+@mixin space-x($space) {
+    > * + * {
+        margin-left: $space;
+    }
+}
+
+@mixin space-y($space) {
+    > * + * {
+        margin-top: $space;
+    }
+}
+
+@mixin small {
+    @media screen and (min-width: 640px) {
+        @content;
+    }
 }
 
 @mixin medium {
@@ -12,6 +31,12 @@
 
 @mixin large {
     @media screen and (min-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin x-large {
+    @media screen and (min-width: 1280px) {
         @content;
     }
 }

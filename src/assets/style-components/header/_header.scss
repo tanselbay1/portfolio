@@ -1,0 +1,75 @@
+@use '../mixins' as *;
+@use '../variables' as *;
+
+.header__container {
+    @include flex(row, flex-start, space-between);
+    padding: 2rem 2rem 1.3rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+
+    @include medium {
+        @include flex(row, center, flex-start);
+        padding-top: 2rem;
+        padding-bottom: 1.3rem;
+    }
+
+    @include large {
+        @include flex(row, center, space-around);
+    }
+
+    @include x-large {
+        // left: -3rem;
+    }
+
+    h3 {
+        color: var(--text-color);
+        font-size: 1.5rem;
+        letter-spacing: 2px;
+
+        @include medium {
+            margin-right: 5vw;
+            font-size: 1.6rem;
+        }
+
+        @include large {
+            font-size: 1.9rem;
+            margin-right: 0;
+        }
+
+        @include x-large {
+            font-size: 2rem;
+        }
+
+        .surname {
+            color: var(--dark-red);
+        }
+
+        .logo-surname {
+            color: var(--text-color);
+        }
+    }
+
+    .nav {
+        @include flex(column, center, space-around);
+
+        button {
+            background: transparent;
+            border: none;
+            color: var(--text-color);
+            cursor: pointer;
+            margin-right: 20px;
+            svg {
+                height: 1.875rem;
+                width: 1.875rem;
+            }
+        }
+    }
+}
+
+.scrolling {
+    transition: 1s all;
+    background-color: var(--dark-red);
+    backdrop-filter: blur(8px);
+}

@@ -1,0 +1,108 @@
+@use '../mixins' as *;
+@use '../variables' as *;
+
+.nav-menu {
+    @include flex(column, flex-end, center);
+    position: fixed;
+    right: 0;
+    margin-top: 5.8rem;
+
+    @include medium {
+        margin-top: 0;
+        position: static;
+        @include flex(row, baseline, space-evenly);
+    }
+
+    div:last-child {
+        @include medium {
+            transform: translateX(0);
+        }
+    }
+
+    a.nav-menu-link {
+        color: var(--text-color);
+        background-color: var(--red);
+        display: block;
+        font-size: 1rem;
+        padding: 0.4rem;
+        position: relative;
+        margin-left: 2rem;
+        text-decoration: none;
+        z-index: 100;
+
+        &:hover {
+            transition: 0.5s all;
+            background-color: var(--dark-red);
+            backdrop-filter: blur(8px);
+        }
+
+        @include medium {
+            @include flex(row, baseline, center);
+            background: none;
+            margin-left: 0.4vw;
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 5px;
+                display: block;
+                width: 0;
+                height: 4px;
+                background: var(--dark-red);
+                transition: width 0.3s ease;
+            }
+
+            &:hover {
+                background: none;
+            }
+
+            &:hover::after {
+                width: 100%;
+            }
+        }
+
+        @include large {
+            font-size: 1.1rem;
+            margin-left: 2vw;
+        }
+
+        @include x-large {
+            font-size: 1.2rem;
+            margin-left: 1rem;
+        }
+
+        svg {
+            margin-right: 0.3rem;
+        }
+    }
+
+    ul {
+        width: 20rem;
+        @include medium {
+            @include flex(row, center, center);
+        }
+    }
+
+    li {
+        margin-bottom: 0.1rem;
+    }
+
+    .menu > li:last-child {
+        a {
+            border-bottom-left-radius: 20px;
+
+            @include medium {
+                border-radius: 0;
+            }
+        }
+    }
+    .menu > li:first-child {
+        a {
+            border-top-left-radius: 20px;
+
+            @include medium {
+                border-radius: 0;
+            }
+        }
+    }
+}
