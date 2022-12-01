@@ -2,7 +2,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { IoHome } from 'react-icons/io5';
 import { HiUser } from 'react-icons/hi';
 import { FaTools, FaCodepen } from 'react-icons/fa';
-import ThemeToggle from '../ThemeToggle';
+import ThemeToggle from './ThemeToggle';
 
 export default function NavMenu({
     isOpen = true,
