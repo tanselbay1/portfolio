@@ -6,24 +6,24 @@ $font-text: 'Montserrat', sans-serif;
 //COLORS
 //Dark Theme Colors
 :root {
-    --red: #e44e58;
-    --dark-red: #e43956c4;
-    --blue: #0077b5;
-    --gray: rgb(170, 170, 170);
-    --dark-gray: #181a1b;
-    --dark-blue: #002333;
-    --text-color: #fff;
-    --lighter-text: rgb(219, 219, 219);
-    --card-background: #2e3031;
-    --skills-span: rgb(200, 200, 200);
+    --red: hsl(356, 74%, 60%);
+    --dark-red: hsla(350, 76%, 56%, 0.769);
+    --blue: hsl(201, 100%, 35%);
+    --gray: hsl(0, 0%, 67%);
+    --dark-gray: hsl(200, 6%, 10%);
+    --dark-blue: hsl(199, 100%, 10%);
+    --text-color: hsl(0, 0%, 100%);
+    --lighter-text: hsl(0, 0%, 86%);
+    --card-background: hsl(200, 3%, 19%);
+    --skills-span: hsl(0, 0%, 78%);
 }
 
 //Light Theme Colors
 .light {
-    --gray: rgb(107, 107, 107);
-    --dark-gray: white;
-    --text-color: #000;
-    --lighter-text: rgb(37, 37, 37);
-    --card-background: #eeeeee;
-    --skills-span: rgb(61, 61, 61);
+    --gray: hsl(0, 0%, 42%);
+    --dark-gray: hsl(0, 0%, 100%);
+    --text-color: hsl(0, 0%, 0%);
+    --lighter-text: hsl(0, 0%, 15%);
+    --card-background: hsl(0, 0%, 93%);
+    --skills-span: hsl(0, 0%, 24%);
 }
