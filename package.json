@@ -40,6 +40,7 @@
         ]
     },
     "devDependencies": {
+        "@iconify/react": "^4.0.1",
         "eslint": "^8.27.0",
         "eslint-config-airbnb": "^19.0.4",
         "eslint-config-prettier": "^8.5.0",
