@@ -551,14 +551,25 @@ select {
 }
 #projects .container {
     margin-inline: auto;
+    padding: 3rem;
+}
+@media screen and (min-width: 768px) {
+    #projects .container {
+        padding: auto;
+    }
 }
 #projects .header h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     position: relative;
     color: #fff;
     text-transform: capitalize;
     letter-spacing: 2px;
-    margin: 0 auto 2rem 1.8rem;
+    margin-bottom: 2.2rem;
+}
+@media screen and (min-width: 768px) {
+    #projects .header h2 {
+        font-size: 2.5rem;
+    }
 }
 #projects .header h2 span.coloured {
     color: var(--red);
@@ -571,6 +582,11 @@ select {
     width: 20%;
     height: 3.5px;
     background: var(--red);
+}
+@media screen and (min-width: 768px) {
+    #projects .header h2::after {
+        width: 23%;
+    }
 }
 #projects .projects-wrapper {
     display: flex;
@@ -586,14 +602,14 @@ select {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     background-color: var(--dark-gray);
     border-radius: 15px;
+    height: 35rem;
     text-align: center;
-    width: 21rem;
+    width: 20rem;
 }
 .project .project-img {
-    background-image: url('../../images/desktop-design-light.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -630,7 +646,10 @@ select {
 .project-buttons {
     margin-bottom: 2rem;
 }
-.project-buttons button.project-btn {
+.project-buttons a.project-btn {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
     background-color: var(--red);
     border-radius: 100rem;
     border: none;
@@ -639,14 +658,15 @@ select {
     margin-left: 0.7rem;
     outline: none;
     padding: 0.5rem 1.5rem;
+    text-decoration: none;
     transition: 0.3s ease;
 }
-.project-buttons button.project-btn:hover {
+.project-buttons a.project-btn:hover {
     background-color: var(--text-color);
     color: var(--red);
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
-.project-buttons button.project-btn svg {
+.project-buttons a.project-btn svg {
     margin-right: 0.5rem;
     transform: translateY(20%);
 }

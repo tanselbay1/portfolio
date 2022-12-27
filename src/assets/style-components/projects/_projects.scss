@@ -7,16 +7,26 @@
 
     .container {
         margin-inline: auto;
+        padding: 3rem;
+
+        @include medium {
+            padding: auto;
+        }
     }
 
     .header {
         h2 {
-            font-size: 2.5rem;
+            font-size: 2rem;
             position: relative;
             color: #fff;
             text-transform: capitalize;
             letter-spacing: 2px;
-            margin: 0 auto 2rem 1.8rem;
+            margin-bottom: 2.2rem;
+
+            @include medium {
+                font-size: 2.5rem;
+            }
+
             span.coloured {
                 color: var(--red);
             }
@@ -29,6 +39,10 @@
             width: 20%;
             height: 3.5px;
             background: var(--red);
+
+            @include medium {
+                width: 23%;
+            }
         }
     }
 

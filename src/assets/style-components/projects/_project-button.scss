@@ -3,7 +3,8 @@
 .project-buttons {
     margin-bottom: 2rem;
 
-    button.project-btn {
+    a.project-btn {
+        appearance: button;
         background-color: var(--red);
         border-radius: 100rem;
         border: none;
@@ -12,6 +13,7 @@
         margin-left: 0.7rem;
         outline: none;
         padding: 0.5rem 1.5rem;
+        text-decoration: none;
         transition: 0.3s ease;
 
         &:hover {

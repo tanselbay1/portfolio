@@ -1,8 +1,14 @@
-export default function Button({ value, icon }) {
+export default function Button({ value, icon, goTo }) {
     return (
-        <button type="button" className="project-btn">
+        <a
+            href={goTo}
+            type="button"
+            target="_blank"
+            rel="noreferrer"
+            className="project-btn"
+        >
             {icon}
             {value}
-        </button>
+        </a>
     );
 }

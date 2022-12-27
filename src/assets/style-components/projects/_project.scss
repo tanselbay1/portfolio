@@ -2,14 +2,15 @@
 @use '../variables' as *;
 
 .project {
-    @include flex(column, center, center);
+    @include flex(column, center, space-between);
     background-color: var(--dark-gray);
     border-radius: 15px;
+    height: 35rem;
     text-align: center;
-    width: 21rem;
+    width: 20rem;
 
     .project-img {
-        background-image: url('../../images/desktop-design-light.jpg');
+        //   background-image: url('../../images/desktop-design-light.jpg');
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;

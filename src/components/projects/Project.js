@@ -1,47 +1,36 @@
 import { FaEye, FaCode } from 'react-icons/fa';
-import { Icon } from '@iconify/react';
 import Button from './Button';
+import MadeWith from './MadeWith';
 
-export default function Project() {
+export default function Project({
+    title,
+    description,
+    buildDate,
+    imageSource,
+    madeWith,
+    demo,
+    code,
+}) {
     return (
         <div className="project">
-            <div className="project-img" />
+            <div
+                className="project-img"
+                style={{
+                    backgroundImage: `url(images/${imageSource})`,
+                }}
+            />
             <div className="project-text">
-                <h2 className="project-header">TODO App</h2>
-                <p className="description">
-                    A classic todo app with a dark/light theme implementation
-                </p>
+                <h2 className="project-header">{title}</h2>
+                <p className="description">{description}</p>
                 <div className="made-width">
                     <p>Made With:</p>
-                    <ul className="icons">
-                        <li>
-                            <Icon
-                                icon="vscode-icons:file-type-html"
-                                inline="true"
-                            />
-                        </li>
-                        <li>
-                            <Icon
-                                icon="vscode-icons:file-type-css"
-                                inline="true"
-                            />
-                        </li>
-                        <li>
-                            <Icon icon="logos:javascript" inline="true" />
-                        </li>
-                        <li>
-                            <Icon
-                                icon="vscode-icons:file-type-reactjs"
-                                inline="true"
-                            />
-                        </li>
-                    </ul>
+                    <MadeWith techList={madeWith} />
                 </div>
-                <p className="build-date">December 2022</p>
+                <p className="build-date">{buildDate}</p>
             </div>
             <div className="project-buttons">
-                <Button value="demo" icon={<FaEye />} />
-                <Button value="code" icon={<FaCode />} />
+                <Button value="demo" icon={<FaEye />} goTo={demo} />
+                <Button value="code" icon={<FaCode />} goTo={code} />
             </div>
         </div>
     );
