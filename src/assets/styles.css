@@ -558,36 +558,6 @@ select {
         padding: auto;
     }
 }
-#projects .header h2 {
-    font-size: 2rem;
-    position: relative;
-    color: #fff;
-    text-transform: capitalize;
-    letter-spacing: 2px;
-    margin-bottom: 2.2rem;
-}
-@media screen and (min-width: 768px) {
-    #projects .header h2 {
-        font-size: 2.5rem;
-    }
-}
-#projects .header h2 span.coloured {
-    color: var(--red);
-}
-#projects .header h2::after {
-    content: '';
-    position: absolute;
-    margin-left: 1rem;
-    top: 50%;
-    width: 20%;
-    height: 3.5px;
-    background: var(--red);
-}
-@media screen and (min-width: 768px) {
-    #projects .header h2::after {
-        width: 23%;
-    }
-}
 #projects .projects-wrapper {
     display: flex;
     flex-direction: row;
@@ -669,6 +639,37 @@ select {
 .project-buttons a.project-btn svg {
     margin-right: 0.5rem;
     transform: translateY(20%);
+}
+
+.header h2 {
+    font-size: 2rem;
+    position: relative;
+    color: #fff;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    margin-bottom: 2.2rem;
+}
+@media screen and (min-width: 768px) {
+    .header h2 {
+        font-size: 2.5rem;
+    }
+}
+.header h2 span.coloured {
+    color: var(--red);
+}
+.header h2::after {
+    content: '';
+    position: absolute;
+    margin-left: 1rem;
+    top: 50%;
+    width: 20%;
+    height: 3.5px;
+    background: var(--red);
+}
+@media screen and (min-width: 768px) {
+    .header h2::after {
+        width: 23%;
+    }
 }
 
 * {

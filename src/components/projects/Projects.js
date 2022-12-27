@@ -1,3 +1,4 @@
+import SectionHeader from '../UI/SectionHeader';
 import Project from './Project';
 import data from '../../data/projects-data.json';
 
@@ -6,10 +7,11 @@ export default function Projects() {
         <section id="projects">
             <div className="container">
                 <div className="header">
-                    <h2 className="title">
+                    {/* <h2 className="title">
                         My
                         <span className="coloured"> Projects</span>
-                    </h2>
+                    </h2> */}
+                    <SectionHeader title="My" span="Projects" />
                 </div>
                 <div className="projects-wrapper">
                     {data.map((project) => (
