@@ -6,6 +6,9 @@
 @use './style-components/header/nav-menu';
 @use './style-components/hero';
 @use './style-components/about';
+@use './style-components/projects/projects';
+@use './style-components/projects/project';
+@use './style-components/projects/project-button';
 
 * {
     font-family: $font-text;
