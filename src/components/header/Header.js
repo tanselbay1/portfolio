@@ -51,7 +51,7 @@ export function Header() {
     }, []);
 
     return (
-        <header>
+        <header id="home">
             <div ref={headerContainer} className="header__container">
                 <h3 className="logo">
                     NAME{' '}

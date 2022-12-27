@@ -1,0 +1,76 @@
+[
+    {
+        "id": "1",
+        "title": "TODO App",
+        "description": "A classic todo app with a dark/light theme implementation",
+        "build-date": "December 2022",
+        "image": "/todo-screenshot.jpg",
+        "made-with": [
+            "html",
+            "css",
+            "javascript",
+            "scss",
+            "react",
+            "framer-motion"
+        ],
+        "demo": "https://visionary-taffy-699c5d.netlify.app",
+        "code": "https://github.com/tanselbay1/todo-app"
+    },
+    {
+        "id": "2",
+        "title": "Math Castle",
+        "description": "An educational castle defence game",
+        "build-date": "August 2021",
+        "image": "/math-castle-demo.gif",
+        "made-with": ["html", "css", "javascript"],
+        "demo": "https://kapaha.github.io/math-castle/",
+        "code": "https://github.com/kapaha/math-castle"
+    },
+    {
+        "id": "3",
+        "title": "Tip Calculator",
+        "description": "An app for calculating tip with a simple UI",
+        "build-date": "November 2022",
+        "image": "/tip-calculator-screenshot.jpeg",
+        "made-with": ["html", "css", "javascript", "scss", "react"],
+        "demo": "https://lucky-duckanoo-88319d.netlify.app",
+        "code": "https://github.com/tanselbay1/tip-calculator-app"
+    },
+    {
+        "id": "4",
+        "title": "Product Preview Card",
+        "description": "Example product preview card with mobile and desktop design",
+        "build-date": "October 2022",
+        "image": "/product-preview-card-screenshot.png",
+        "made-with": ["html", "css", "javascript", "scss", "react"],
+        "demo": "https://deft-daifuku-a40f8c.netlify.app",
+        "code": "https://github.com/tanselbay1/product-preview-card-component"
+    },
+    {
+        "id": "5",
+        "title": "Find Your Hat",
+        "description": "Terminal game build with only Javascript",
+        "build-date": "June 2022",
+        "image": "/find-your-hat-screenshot.png",
+        "made-with": ["javascript"],
+        "demo": "https://github.com/tanselbay1/findYourHat",
+        "code": "https://github.com/tanselbay1/findYourHat"
+    },
+    {
+        "id": "6",
+        "title": "Portfolio",
+        "description": "Mobile first and dark theme functionality Portfolio Website",
+        "build-date": "December 2022",
+        "image": "/portfolio-screenshot.png",
+        "made-with": [
+            "html",
+            "css",
+            "javascript",
+            "scss",
+            "react",
+            "framer-motion"
+        ],
+        "demo": "https://quiet-fox-495562.netlify.app",
+        "code": "https://github.com/tanselbay1/portfolio"
+    }
+]

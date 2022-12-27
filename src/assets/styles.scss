@@ -5,6 +5,10 @@
 @use './style-components//header/themeToggle';
 @use './style-components/header/nav-menu';
 @use './style-components/hero';
+@use './style-components/about';
+@use './style-components/projects/projects';
+@use './style-components/projects/project';
+@use './style-components/projects/project-button';
 
 * {
     font-family: $font-text;
@@ -17,4 +21,28 @@ body {
     // @include medium {
     //     margin: 5rem;
     // }
+}
+
+.container {
+    width: 100%;
+
+    @include small {
+        max-width: 640px;
+    }
+
+    @include medium {
+        max-width: 768px;
+    }
+
+    @include large {
+        max-width: 1024px;
+    }
+
+    @include x-large {
+        max-width: 1280px;
+    }
+
+    @include xx-large {
+        max-width: 1536px;
+    }
 }
