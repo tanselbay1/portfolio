@@ -7,10 +7,6 @@ export default function Projects() {
         <section id="projects">
             <div className="container">
                 <div className="header">
-                    {/* <h2 className="title">
-                        My
-                        <span className="coloured"> Projects</span>
-                    </h2> */}
                     <SectionHeader title="My" span="Projects" />
                 </div>
                 <div className="projects-wrapper">

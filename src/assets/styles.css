@@ -644,7 +644,7 @@ select {
 .header h2 {
     font-size: 2rem;
     position: relative;
-    color: #fff;
+    color: var(--text-color);
     text-transform: capitalize;
     letter-spacing: 2px;
     margin-bottom: 2.2rem;
