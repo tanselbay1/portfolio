@@ -1,0 +1,19 @@
+@use '../mixins' as *;
+
+section#skills {
+    * {
+        //   border: 1px solid red;
+    }
+    @include flex(column, center, center);
+
+    .skills {
+        @include flex(column, center, center);
+        gap: 4rem;
+        text-align: center;
+
+        @include large {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+    }
+}

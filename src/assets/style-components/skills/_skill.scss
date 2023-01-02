@@ -1,0 +1,29 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.skill {
+    background-color: var(--card-background);
+    padding: 2.4rem 2rem;
+    height: 20rem;
+    width: 17rem;
+
+    h2 {
+        font-size: min(113%, 1.2rem);
+        margin-bottom: 1rem;
+        margin-top: 0.85rem;
+    }
+
+    li {
+        color: var(--skills-span);
+        font-size: 0.95rem;
+        margin-bottom: 0.4rem;
+
+        svg {
+            margin-left: 0.25rem;
+        }
+    }
+
+    .header-icon {
+        font-size: 4.5rem;
+    }
+}
