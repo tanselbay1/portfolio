@@ -1,10 +1,7 @@
 @use '../mixins' as *;
 
 section#skills {
-    * {
-        //   border: 1px solid red;
-    }
-    @include flex(column, center, center);
+    @include flex(column, center, space-evenly);
 
     .skills {
         @include flex(column, center, center);

@@ -1,6 +1,10 @@
 @use '../variables' as *;
 @use '../mixins' as *;
 
+.skill-container {
+    position: relative;
+}
+
 .skill {
     background-color: var(--card-background);
     padding: 2.4rem 2rem;
@@ -26,4 +30,13 @@
     .header-icon {
         font-size: 4.5rem;
     }
+}
+
+.skill-background {
+    background-color: var(--red);
+    top: 30px;
+    width: 17rem;
+    height: 18rem;
+    position: absolute;
+    z-index: -1;
 }

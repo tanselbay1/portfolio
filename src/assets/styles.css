@@ -676,7 +676,7 @@ section#skills {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 section#skills .skills {
     display: flex;
@@ -691,6 +691,10 @@ section#skills .skills {
         flex-direction: row;
         flex-wrap: wrap;
     }
+}
+
+.skill-container {
+    position: relative;
 }
 
 .skill {
@@ -714,6 +718,15 @@ section#skills .skills {
 }
 .skill .header-icon {
     font-size: 4.5rem;
+}
+
+.skill-background {
+    background-color: var(--red);
+    top: 30px;
+    width: 17rem;
+    height: 18rem;
+    position: absolute;
+    z-index: -1;
 }
 
 * {
