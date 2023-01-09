@@ -1,0 +1,16 @@
+@use '../mixins' as *;
+
+section#skills {
+    @include flex(column, center, space-evenly);
+
+    .skills {
+        @include flex(column, center, center);
+        gap: 4rem;
+        text-align: center;
+
+        @include large {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+    }
+}

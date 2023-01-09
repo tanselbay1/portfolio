@@ -7,42 +7,9 @@
 
     .container {
         margin-inline: auto;
-        padding: 3rem;
 
         @include medium {
             padding: auto;
-        }
-    }
-
-    .header {
-        h2 {
-            font-size: 2rem;
-            position: relative;
-            color: #fff;
-            text-transform: capitalize;
-            letter-spacing: 2px;
-            margin-bottom: 2.2rem;
-
-            @include medium {
-                font-size: 2.5rem;
-            }
-
-            span.coloured {
-                color: var(--red);
-            }
-        }
-        h2::after {
-            content: '';
-            position: absolute;
-            margin-left: 1rem;
-            top: 50%;
-            width: 20%;
-            height: 3.5px;
-            background: var(--red);
-
-            @include medium {
-                width: 23%;
-            }
         }
     }
 

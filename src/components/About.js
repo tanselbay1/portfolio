@@ -2,11 +2,11 @@ import personImage from 'assets/images/person.svg';
 
 export function About() {
     return (
-        <section className="about-container">
+        <section id="about" className="about-container">
             <div className="container">
                 <div className="text">
                     <div className="title-container">
-                        <h2 id="about" className="title">
+                        <h2 className="title">
                             <span className="coloured">About</span> Me
                         </h2>
                     </div>

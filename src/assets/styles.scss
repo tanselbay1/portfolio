@@ -9,21 +9,22 @@
 @use './style-components/projects/projects';
 @use './style-components/projects/project';
 @use './style-components/projects/project-button';
+@use './style-components/SectionHeader';
+@use './style-components/skills/skills';
+@use './style-components/skills/skill';
 
 * {
     font-family: $font-text;
+    transition: background-color 0.3s ease-in;
 }
 
 body {
     background-color: var(--dark-gray);
     color: var(--text-color);
-
-    // @include medium {
-    //     margin: 5rem;
-    // }
 }
 
 .container {
+    padding: 3.5rem 4.5rem 5rem;
     width: 100%;
 
     @include small {
