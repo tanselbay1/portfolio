@@ -6,6 +6,7 @@
     position: fixed;
     right: 0;
     margin-top: 5.8rem;
+    z-index: 2;
 
     @include medium {
         margin-top: 0;

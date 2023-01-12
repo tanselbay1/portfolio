@@ -1,0 +1,37 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.back-to-top {
+    border-radius: 50%;
+    position: fixed;
+    bottom: 2rem;
+    right: 1rem;
+    z-index: 1;
+
+    @include medium {
+        bottom: 3rem;
+        right: 2rem;
+    }
+
+    @include large {
+        bottom: 4rem;
+        right: 4rem;
+    }
+
+    svg {
+        color: var(--red);
+        cursor: pointer;
+        width: 3.2rem;
+        height: 3.2rem;
+
+        @include medium {
+            width: 3.5rem;
+            height: 3.5rem;
+        }
+
+        @include large {
+            width: 4.5rem;
+            height: 4.5rem;
+        }
+    }
+}
