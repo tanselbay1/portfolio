@@ -9,9 +9,10 @@
 @use './style-components/projects/projects';
 @use './style-components/projects/project';
 @use './style-components/projects/project-button';
-@use './style-components/SectionHeader';
+@use './style-components/style-UI/SectionHeader';
 @use './style-components/skills/skills';
 @use './style-components/skills/skill';
+@use './style-components/style-UI/back-to-top';
 
 * {
     font-family: $font-text;

@@ -258,6 +258,7 @@ select {
     position: fixed;
     right: 0;
     margin-top: 5.8rem;
+    z-index: 2;
 }
 @media screen and (min-width: 768px) {
     .nav-menu {
@@ -727,6 +728,32 @@ section#skills .skills {
     height: 18rem;
     position: absolute;
     z-index: -1;
+}
+
+.back-to-top {
+    border-radius: 50%;
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+    z-index: 1;
+}
+@media screen and (min-width: 1024px) {
+    .back-to-top {
+        bottom: 4rem;
+        right: 4rem;
+    }
+}
+.back-to-top svg {
+    color: var(--red);
+    cursor: pointer;
+    width: 4rem;
+    height: 4rem;
+}
+@media screen and (min-width: 1024px) {
+    .back-to-top svg {
+        width: 5rem;
+        height: 5rem;
+    }
 }
 
 * {
