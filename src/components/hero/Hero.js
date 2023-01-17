@@ -3,7 +3,8 @@ import {
     createTypedInstance,
     destroyTypedInstance,
     TYPED_HERO_OPTIONS,
-} from '../library/typed';
+} from '../../library/typed';
+import Socials from './Socials';
 
 export function Hero() {
     const typedElement = useRef(null);
@@ -37,6 +38,7 @@ export function Hero() {
                     Projects
                 </a>
             </div>
+            <Socials />
         </div>
     );
 }

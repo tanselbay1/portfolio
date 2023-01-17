@@ -4,7 +4,7 @@
 @use './style-components//header/header';
 @use './style-components//header/themeToggle';
 @use './style-components/header/nav-menu';
-@use './style-components/hero';
+@use './style-components/hero/hero';
 @use './style-components/about';
 @use './style-components/projects/projects';
 @use './style-components/projects/project';
@@ -13,6 +13,7 @@
 @use './style-components/skills/skills';
 @use './style-components/skills/skill';
 @use './style-components/style-UI/back-to-top';
+@use './style-components//hero/socials';
 
 * {
     font-family: $font-text;
