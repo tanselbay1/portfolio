@@ -626,11 +626,23 @@ select {
     border: none;
     color: var(--text-color);
     cursor: pointer;
-    margin-left: 0.7rem;
     outline: none;
-    padding: 0.5rem 1.5rem;
+    padding: 0.4rem 1.2rem;
     text-decoration: none;
     transition: 0.3s ease;
+}
+@media screen and (min-width: 640px) {
+    .project-buttons a.project-btn {
+        padding: 0.5rem 1.5rem;
+    }
+}
+.project-buttons a.project-btn:last-child {
+    margin-left: 0.5rem;
+}
+@media screen and (min-width: 640px) {
+    .project-buttons a.project-btn:last-child {
+        margin-left: 1rem;
+    }
 }
 .project-buttons a.project-btn:hover {
     background-color: var(--text-color);
