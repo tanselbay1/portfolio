@@ -365,12 +365,13 @@ select {
 }
 
 .hero-container {
-    min-height: 110vh;
-    padding: 0 1rem 0 1rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    min-height: 110vh;
+    padding: 0 1rem 0 1rem;
+    position: relative;
     text-align: center;
 }
 .hero-container > * + * {
@@ -702,7 +703,7 @@ section#skills .skills {
     background-color: var(--card-background);
     padding: 2.4rem 2rem;
     height: 20rem;
-    width: 17rem;
+    width: 16.5rem;
 }
 .skill h2 {
     font-size: min(113%, 1.2rem);
@@ -724,7 +725,7 @@ section#skills .skills {
 .skill-background {
     background-color: var(--red);
     top: 30px;
-    width: 17rem;
+    width: 16.5rem;
     height: 18rem;
     position: absolute;
     z-index: -1;
@@ -733,9 +734,15 @@ section#skills .skills {
 .back-to-top {
     border-radius: 50%;
     position: fixed;
-    bottom: 3rem;
-    right: 3rem;
+    bottom: 2rem;
+    right: 1rem;
     z-index: 1;
+}
+@media screen and (min-width: 768px) {
+    .back-to-top {
+        bottom: 3rem;
+        right: 2rem;
+    }
 }
 @media screen and (min-width: 1024px) {
     .back-to-top {
@@ -746,14 +753,71 @@ section#skills .skills {
 .back-to-top svg {
     color: var(--red);
     cursor: pointer;
-    width: 4rem;
-    height: 4rem;
+    width: 3.2rem;
+    height: 3.2rem;
+}
+@media screen and (min-width: 768px) {
+    .back-to-top svg {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
 }
 @media screen and (min-width: 1024px) {
     .back-to-top svg {
-        width: 5rem;
-        height: 5rem;
+        width: 4.5rem;
+        height: 4.5rem;
     }
+}
+
+.socials {
+    position: absolute;
+    bottom: 22%;
+    left: 0;
+}
+@media screen and (min-width: 768px) {
+    .socials {
+        bottom: 29%;
+    }
+}
+.socials .social {
+    padding: 0.8rem 0.8rem 0.8rem 1.2rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    transform: translateX(10px);
+}
+@media screen and (min-width: 768px) {
+    .socials .social {
+        padding: 1rem 1rem 1rem 1.2rem;
+        font-size: 1.3rem;
+    }
+}
+.socials .social a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1.1rem;
+    color: #fff;
+    text-decoration: none;
+}
+.socials .social a svg {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+@media screen and (min-width: 768px) {
+    .socials .social a svg {
+        width: 2rem;
+        height: 2rem;
+    }
+}
+.socials .social__linkedin {
+    background-color: var(--blue);
+}
+.socials .social__github {
+    background-color: #2e3031;
+}
+.socials .social__mail {
+    background-color: var(--red);
 }
 
 * {
