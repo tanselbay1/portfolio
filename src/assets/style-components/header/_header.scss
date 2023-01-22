@@ -1,16 +1,25 @@
 @use '../mixins' as *;
 @use '../variables' as *;
 
+header#home {
+    position: relative;
+    width: 100vw;
+    overflow-x: scroll;
+}
+
 .header__container {
-    @include flex(row, flex-start, space-between);
-    padding: 2rem 2rem 1.3rem;
+    @include flex(row, center, space-between);
+    padding: 1.3rem 2rem 0.9rem;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 3;
 
+    @include small {
+        padding: 1.4rem 2.2rem 1rem;
+    }
+
     @include medium {
-        @include flex(row, center, flex-start);
         padding-top: 2rem;
         padding-bottom: 1.3rem;
     }
@@ -19,27 +28,27 @@
         @include flex(row, center, space-around);
     }
 
-    @include x-large {
-        // left: -3rem;
-    }
-
-    h3 {
+    h2 {
         color: var(--text-color);
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         letter-spacing: 2px;
 
+        @include small {
+            font-size: 1.3rem;
+        }
+
         @include medium {
-            margin-right: 5vw;
             font-size: 1.6rem;
+            margin-right: 5vw;
         }
 
         @include large {
-            font-size: 1.9rem;
+            font-size: 1.7rem;
             margin-right: 0;
         }
 
         @include x-large {
-            font-size: 2rem;
+            font-size: 1.9rem;
         }
 
         .surname {

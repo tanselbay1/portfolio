@@ -129,23 +129,30 @@ select {
     --skills-span: hsl(0, 0%, 24%);
 }
 
+header#home {
+    position: relative;
+    width: 100vw;
+    overflow-x: scroll;
+}
+
 .header__container {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-between;
-    padding: 2rem 2rem 1.3rem;
+    padding: 1.3rem 2rem 0.9rem;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 3;
 }
+@media screen and (min-width: 640px) {
+    .header__container {
+        padding: 1.4rem 2.2rem 1rem;
+    }
+}
 @media screen and (min-width: 768px) {
     .header__container {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: flex-start;
         padding-top: 2rem;
         padding-bottom: 1.3rem;
     }
@@ -158,32 +165,37 @@ select {
         justify-content: space-around;
     }
 }
-.header__container h3 {
+.header__container h2 {
     color: var(--text-color);
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     letter-spacing: 2px;
 }
+@media screen and (min-width: 640px) {
+    .header__container h2 {
+        font-size: 1.3rem;
+    }
+}
 @media screen and (min-width: 768px) {
-    .header__container h3 {
-        margin-right: 5vw;
+    .header__container h2 {
         font-size: 1.6rem;
+        margin-right: 5vw;
     }
 }
 @media screen and (min-width: 1024px) {
-    .header__container h3 {
-        font-size: 1.9rem;
+    .header__container h2 {
+        font-size: 1.7rem;
         margin-right: 0;
     }
 }
 @media screen and (min-width: 1280px) {
-    .header__container h3 {
-        font-size: 2rem;
+    .header__container h2 {
+        font-size: 1.9rem;
     }
 }
-.header__container h3 .surname {
+.header__container h2 .surname {
     color: var(--dark-red);
 }
-.header__container h3 .logo-surname {
+.header__container h2 .logo-surname {
     color: var(--text-color);
 }
 .header__container .nav {
@@ -221,7 +233,6 @@ select {
 }
 .checkbox__container .checkbox {
     opacity: 0;
-    position: absolute;
 }
 .checkbox__container .label {
     width: 50px;
@@ -260,7 +271,7 @@ select {
     margin-top: 5.8rem;
     z-index: 2;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
     .nav-menu {
         margin-top: 0;
         position: static;
@@ -280,9 +291,9 @@ select {
     background-color: var(--red);
     display: block;
     font-size: 1rem;
-    padding: 0.4rem;
+    padding: 0.5rem;
+    padding-left: 2rem;
     position: relative;
-    margin-left: 2rem;
     text-decoration: none;
     z-index: 100;
 }
@@ -292,14 +303,16 @@ select {
     -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
     .nav-menu a.nav-menu-link {
         display: flex;
         flex-direction: row;
         align-items: baseline;
         justify-content: center;
         background: none;
+        font-size: 1.1rem;
         margin-left: 0.4vw;
+        padding-left: 0.1rem;
     }
     .nav-menu a.nav-menu-link::after {
         content: '';
@@ -318,12 +331,6 @@ select {
         width: 100%;
     }
 }
-@media screen and (min-width: 1024px) {
-    .nav-menu a.nav-menu-link {
-        font-size: 1.1rem;
-        margin-left: 2vw;
-    }
-}
 @media screen and (min-width: 1280px) {
     .nav-menu a.nav-menu-link {
         font-size: 1.2rem;
@@ -334,14 +341,15 @@ select {
     margin-right: 0.3rem;
 }
 .nav-menu ul {
-    width: 20rem;
+    width: 18rem;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
     .nav-menu ul {
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: center;
+        width: auto;
     }
 }
 .nav-menu li {
@@ -350,7 +358,7 @@ select {
 .nav-menu .menu > li:last-child a {
     border-bottom-left-radius: 20px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
     .nav-menu .menu > li:last-child a {
         border-radius: 0;
     }
@@ -358,7 +366,7 @@ select {
 .nav-menu .menu > li:first-child a {
     border-top-left-radius: 20px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
     .nav-menu .menu > li:first-child a {
         border-radius: 0;
     }
@@ -458,13 +466,7 @@ select {
 }
 
 .about-container {
-    padding: 3rem;
     background-color: var(--dark-blue);
-}
-@media screen and (min-width: 1024px) {
-    .about-container {
-        padding: 5rem;
-    }
 }
 .about-container .container {
     margin-inline: auto;
@@ -487,41 +489,6 @@ select {
 .about-container .text > * + * {
     margin-top: 1rem;
 }
-.about-container .text .title-container {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    -moz-column-gap: 1rem;
-    column-gap: 1rem;
-    row-gap: 0.5rem;
-}
-.about-container .text .title-container::after {
-    content: '';
-    min-width: 50px;
-    max-width: 250px;
-    flex: 1 0 20px;
-    border-top: 4px solid var(--red);
-    border-radius: 8px;
-}
-.about-container .text .title-container .title {
-    font-size: 2rem;
-    letter-spacing: 0.05em;
-    color: #fff;
-}
-@media screen and (min-width: 640px) {
-    .about-container .text .title-container .title {
-        font-size: 2.25rem;
-    }
-}
-@media screen and (min-width: 768px) {
-    .about-container .text .title-container .title {
-        font-size: 2.5rem;
-    }
-}
-.about-container .text .title-container .title .coloured {
-    color: var(--red);
-}
 .about-container .text .lead {
     color: rgb(200, 200, 200);
     line-height: 1.75;
@@ -534,6 +501,7 @@ select {
 }
 .about-container .img-container {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -626,11 +594,23 @@ select {
     border: none;
     color: var(--text-color);
     cursor: pointer;
-    margin-left: 0.7rem;
     outline: none;
-    padding: 0.5rem 1.5rem;
+    padding: 0.4rem 1.2rem;
     text-decoration: none;
     transition: 0.3s ease;
+}
+@media screen and (min-width: 640px) {
+    .project-buttons a.project-btn {
+        padding: 0.5rem 1.5rem;
+    }
+}
+.project-buttons a.project-btn:last-child {
+    margin-left: 0.5rem;
+}
+@media screen and (min-width: 640px) {
+    .project-buttons a.project-btn:last-child {
+        margin-left: 1rem;
+    }
 }
 .project-buttons a.project-btn:hover {
     background-color: var(--text-color);
@@ -674,11 +654,19 @@ select {
     }
 }
 
+@media screen and (min-width: 768px) {
+    .about-container h2::after {
+        width: 40%;
+    }
+}
+
 section#skills {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    padding-top: 4.5rem;
+    padding-bottom: 6rem;
 }
 section#skills .skills {
     display: flex;
@@ -746,8 +734,8 @@ section#skills .skills {
 }
 @media screen and (min-width: 1024px) {
     .back-to-top {
-        bottom: 4rem;
-        right: 4rem;
+        bottom: 3.8rem;
+        right: 3.8rem;
     }
 }
 .back-to-top svg {
@@ -772,11 +760,12 @@ section#skills .skills {
 .socials {
     position: absolute;
     bottom: 22%;
-    left: 0;
+    left: 11px;
 }
 @media screen and (min-width: 768px) {
     .socials {
         bottom: 29%;
+        left: 0;
     }
 }
 .socials .social {
@@ -852,10 +841,5 @@ body {
 @media screen and (min-width: 1280px) {
     .container {
         max-width: 1280px;
-    }
-}
-@media screen and (min-width: 1536px) {
-    .container {
-        max-width: 1536px;
     }
 } /*# sourceMappingURL=styles.css.map */

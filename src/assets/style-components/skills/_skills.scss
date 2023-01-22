@@ -2,6 +2,8 @@
 
 section#skills {
     @include flex(column, center, space-evenly);
+    padding-top: 4.5rem;
+    padding-bottom: 6rem;
 
     .skills {
         @include flex(column, center, center);

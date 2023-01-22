@@ -4,10 +4,11 @@
 .socials {
     position: absolute;
     bottom: 22%;
-    left: 0;
+    left: 11px;
 
     @include medium {
         bottom: 29%;
+        left: 0;
     }
 
     .social {

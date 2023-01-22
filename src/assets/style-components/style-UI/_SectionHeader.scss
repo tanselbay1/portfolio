@@ -33,3 +33,12 @@
         }
     }
 }
+
+// about-section switch flex-direction, therefore h2::after needed to be consistent with other section headers
+.about-container {
+    @include medium {
+        h2::after {
+            width: 40%;
+        }
+    }
+}
