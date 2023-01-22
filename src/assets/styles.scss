@@ -44,8 +44,4 @@ body {
     @include x-large {
         max-width: 1280px;
     }
-
-    @include xx-large {
-        max-width: 1536px;
-    }
 }

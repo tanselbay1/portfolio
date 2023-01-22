@@ -60,11 +60,11 @@ export default function NavMenu({
                 {isOpen && (
                     <motion.div
                         key="themeToggle"
-                        initial={{ x: '30vw', opacity: 0, scale: 0.5 }}
+                        initial={{ x: '-150', opacity: 0, scale: 0.5 }}
                         animate={
                             toggleLocation
-                                ? { x: -130, opacity: 1, scale: 1 }
-                                : { x: '165%', opacity: 1, scale: 1 }
+                                ? { x: -110, opacity: 1, scale: 1 }
+                                : { x: '0', opacity: 1, scale: 1 }
                         }
                         transition={{ duration: 0.5 }}
                         exit={{ x: '30vw', opacity: 0, scale: 0 }}

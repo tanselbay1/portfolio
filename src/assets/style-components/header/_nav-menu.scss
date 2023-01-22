@@ -8,7 +8,7 @@
     margin-top: 5.8rem;
     z-index: 2;
 
-    @include medium {
+    @include large {
         margin-top: 0;
         position: static;
         @include flex(row, baseline, space-evenly);
@@ -25,9 +25,9 @@
         background-color: var(--red);
         display: block;
         font-size: 1rem;
-        padding: 0.4rem;
+        padding: 0.5rem;
+        padding-left: 2rem;
         position: relative;
-        margin-left: 2rem;
         text-decoration: none;
         z-index: 100;
 
@@ -37,10 +37,12 @@
             backdrop-filter: blur(8px);
         }
 
-        @include medium {
+        @include large {
             @include flex(row, baseline, center);
             background: none;
+            font-size: 1.1rem;
             margin-left: 0.4vw;
+            padding-left: 0.1rem;
 
             &::after {
                 content: '';
@@ -62,11 +64,6 @@
             }
         }
 
-        @include large {
-            font-size: 1.1rem;
-            margin-left: 2vw;
-        }
-
         @include x-large {
             font-size: 1.2rem;
             margin-left: 1rem;
@@ -78,9 +75,10 @@
     }
 
     ul {
-        width: 20rem;
-        @include medium {
+        width: 18rem;
+        @include large {
             @include flex(row, center, center);
+            width: auto;
         }
     }
 
@@ -92,7 +90,7 @@
         a {
             border-bottom-left-radius: 20px;
 
-            @include medium {
+            @include large {
                 border-radius: 0;
             }
         }
@@ -101,7 +99,7 @@
         a {
             border-top-left-radius: 20px;
 
-            @include medium {
+            @include large {
                 border-radius: 0;
             }
         }
