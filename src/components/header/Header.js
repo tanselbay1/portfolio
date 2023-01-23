@@ -33,10 +33,8 @@ export function Header() {
     useEffect(() => {
         if (initialRender.current) {
             initialRender.current = false;
-            console.log('initialRender');
         } else {
             document.body.classList.toggle('light');
-            console.log('initialRender nooot');
         }
     }, [theme]);
 
