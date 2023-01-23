@@ -1,24 +1,24 @@
-import personImage from 'assets/images/person.svg';
+import SectionHeader from './UI/SectionHeader';
+import personImage from '../assets/images/person.svg';
 
 export function About() {
     return (
-        <section className="about-container">
+        <section id="about" className="about-container">
             <div className="container">
                 <div className="text">
                     <div className="title-container">
-                        <h2 id="about" className="title">
-                            <span className="coloured">About</span> Me
-                        </h2>
+                        <div className="header">
+                            <SectionHeader title="About" span="Me" />
+                        </div>
                     </div>
                     <p className="lead">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Consequatur eos ab rem vitae iusto, aperiam placeat
-                        ipsam veritatis porro, labore sint nobis nulla saepe et
-                        harum molestias a nesciunt soluta velit rerum voluptatum
-                        provident! Quod, optio. Quidem minus aliquid ratione
-                        facere laboriosam nihil, adipisci odit quisquam
-                        blanditiis quos atque magni voluptatibus ex officiis,
-                        sint fugiat earum fuga. Quisquam, praesentium aliquid?
+                        I am a self-taught Web Developer with a Masters degree
+                        in Business Administration. I've always found coding
+                        intuitive and have pushed myself to learn the most
+                        effective ways to achieve a result.
+                        <br />
+                        I'm eager to learn and can quickly integrate into a team
+                        so I can provide value to the company and the customers.
                     </p>
                 </div>
                 <div className="img-container">

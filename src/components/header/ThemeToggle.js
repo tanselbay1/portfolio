@@ -10,7 +10,7 @@ export default function ThemeToggle({ toggle, isThemeDark }) {
                 className="checkbox"
                 id="checkbox"
                 onChange={handleToggle}
-                checked={isThemeDark}
+                checked={!isThemeDark}
             />
             <label htmlFor="checkbox" className="label">
                 <FaMoon color="pink" />

@@ -4,26 +4,29 @@
 @use './style-components//header/header';
 @use './style-components//header/themeToggle';
 @use './style-components/header/nav-menu';
-@use './style-components/hero';
+@use './style-components/hero/hero';
 @use './style-components/about';
 @use './style-components/projects/projects';
 @use './style-components/projects/project';
 @use './style-components/projects/project-button';
+@use './style-components/style-UI/SectionHeader';
+@use './style-components/skills/skills';
+@use './style-components/skills/skill';
+@use './style-components/style-UI/back-to-top';
+@use './style-components//hero/socials';
 
 * {
     font-family: $font-text;
+    transition: background-color 0.3s ease-in;
 }
 
 body {
     background-color: var(--dark-gray);
     color: var(--text-color);
-
-    // @include medium {
-    //     margin: 5rem;
-    // }
 }
 
 .container {
+    padding: 3.5rem 4.5rem 5rem;
     width: 100%;
 
     @include small {
@@ -40,9 +43,5 @@ body {
 
     @include x-large {
         max-width: 1280px;
-    }
-
-    @include xx-large {
-        max-width: 1536px;
     }
 }

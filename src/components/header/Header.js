@@ -17,7 +17,10 @@ export function Header() {
 
     // Get window size with useWindowSize custom hook
     const windowSize = useWindowSize();
-    const isMobile = windowSize.width < 768;
+    const isMobile = windowSize.width < 1024;
+
+    // Use useRef to identify first render
+    const initialRender = useRef(true);
 
     const handleToggle = () => {
         setNavbarOpen((prevState) => !prevState);
@@ -28,7 +31,11 @@ export function Header() {
     };
 
     useEffect(() => {
-        document.body.classList.toggle('light');
+        if (initialRender.current) {
+            initialRender.current = false;
+        } else {
+            document.body.classList.toggle('light');
+        }
     }, [theme]);
 
     useLayoutEffect(() => {
@@ -53,12 +60,12 @@ export function Header() {
     return (
         <header id="home">
             <div ref={headerContainer} className="header__container">
-                <h3 className="logo">
-                    NAME{' '}
+                <h2 className="logo">
+                    TANSEL{' '}
                     <span ref={logoSurname} className="surname">
-                        SURNAME
+                        BAYRAKTAROGLU
                     </span>
-                </h3>
+                </h2>
                 <nav className="nav">
                     {/* Show hamburger menu button on medium and small screens */}
                     {isMobile && (

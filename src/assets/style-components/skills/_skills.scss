@@ -1,0 +1,18 @@
+@use '../mixins' as *;
+
+section#skills {
+    @include flex(column, center, space-evenly);
+    padding-top: 4.5rem;
+    padding-bottom: 6rem;
+
+    .skills {
+        @include flex(column, center, center);
+        gap: 4rem;
+        text-align: center;
+
+        @include large {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+    }
+}

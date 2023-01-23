@@ -1,15 +1,11 @@
-@use './mixins' as *;
-@use './variables' as *;
+@use '../mixins' as *;
+@use '../variables' as *;
 
 .hero-container {
+    @include flex(column, center, center);
     min-height: 110vh;
     padding: 0 1rem 0 1rem;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
+    position: relative;
     text-align: center;
 
     @include space-y(1rem);
@@ -28,11 +24,11 @@
         line-height: 1;
 
         @include small {
-            font-size: 3rem;
+            font-size: 2.8rem;
         }
 
         @include medium {
-            font-size: 4rem;
+            font-size: 3.6rem;
         }
     }
 

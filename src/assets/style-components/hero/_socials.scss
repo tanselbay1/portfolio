@@ -1,0 +1,54 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.socials {
+    position: absolute;
+    bottom: 22%;
+    left: 11px;
+
+    @include medium {
+        bottom: 29%;
+        left: 0;
+    }
+
+    .social {
+        padding: 0.8rem 0.8rem 0.8rem 1.2rem;
+        font-size: 1.1rem;
+        font-weight: 700;
+        transform: translateX(10px);
+
+        @include medium {
+            padding: 1rem 1rem 1rem 1.2rem;
+            font-size: 1.3rem;
+        }
+
+        a {
+            @include flex(row, center, flex-end);
+            gap: 1.1rem;
+            color: #fff;
+            text-decoration: none;
+
+            svg {
+                width: 1.5rem;
+                height: 1.5rem;
+
+                @include medium {
+                    width: 2rem;
+                    height: 2rem;
+                }
+            }
+        }
+    }
+
+    .social__linkedin {
+        background-color: var(--blue);
+    }
+
+    .social__github {
+        background-color: #2e3031;
+    }
+
+    .social__mail {
+        background-color: var(--red);
+    }
+}
