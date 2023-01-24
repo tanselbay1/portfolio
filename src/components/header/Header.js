@@ -19,6 +19,8 @@ export function Header() {
     const windowSize = useWindowSize();
     const isMobile = windowSize.width < 1024;
 
+    const initialRender = useRef(true);
+
     const handleToggle = () => {
         setNavbarOpen((prevState) => !prevState);
     };
@@ -28,7 +30,11 @@ export function Header() {
     };
 
     useEffect(() => {
-        document.body.classList.toggle('light');
+        if (initialRender.current) {
+            initialRender.current = false;
+        } else {
+            document.body.classList.toggle('light');
+        }
     }, [theme]);
 
     useLayoutEffect(() => {
