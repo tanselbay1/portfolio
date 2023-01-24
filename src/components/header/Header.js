@@ -19,6 +19,7 @@ export function Header() {
     const windowSize = useWindowSize();
     const isMobile = windowSize.width < 1024;
 
+    // Use useRef to identify first render
     const initialRender = useRef(true);
 
     const handleToggle = () => {
